@@ -4,6 +4,12 @@
   "description": "Shared Tailwind CSS styles and configuration for Le Petit Garcon projects",
   "type": "module",
   "main": "./tailwind.config.mjs",
+  "exports": {
+    "./components/ui/*": "./components/ui/*",
+    "./tailwind.config.mjs": "./tailwind.config.mjs",
+    "./global.css": "./global.css",
+    "./fonts.css": "./fonts.css"
+  },
   "files": [
     "tailwind.config.mjs",
     "tailwind.config.js",
