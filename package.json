@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Shared Tailwind CSS styles and configuration for Le Petit Garcon projects",
   "type": "module",
-  "main": "./tailwind.config.js",
+  "main": "./tailwind.config.mjs",
   "files": [
+    "tailwind.config.mjs",
     "tailwind.config.js",
     "global.css",
     "fonts.css",
