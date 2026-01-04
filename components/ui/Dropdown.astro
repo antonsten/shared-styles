@@ -1,0 +1,37 @@
+---
+interface Props {
+  label: string;
+  className?: string;
+  buttonClassName?: string;
+  menuClassName?: string;
+}
+
+const {
+  label,
+  className = '',
+  buttonClassName = '',
+  menuClassName = ''
+} = Astro.props;
+---
+
+<div class={`relative group ${className}`}>
+  <button 
+    class={`inline-flex items-center gap-2 text-text-muted hover:text-text transition-colors ${buttonClassName}`}
+    aria-expanded="false"
+    aria-haspopup="true"
+    id={`dropdown-button-${label.toLowerCase().replace(/\s+/g, '-')}`}
+  >
+    {label}
+    <svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div 
+    class={`absolute left-0 mt-2 bg-surface border border-border rounded-[4px] py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 min-w-[200px] ${menuClassName}`}
+    role="menu"
+    aria-labelledby={`dropdown-button-${label.toLowerCase().replace(/\s+/g, '-')}`}
+  >
+    <slot />
+  </div>
+</div>
+

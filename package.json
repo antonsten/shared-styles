@@ -11,6 +11,7 @@
     "fonts.css",
     "fonts/",
     "components/",
+    "STYLING.md",
     "README.md"
   ],
   "peerDependencies": {
