@@ -1,0 +1,26 @@
+{
+  "name": "@le-petit-garcon/shared-styles",
+  "version": "1.0.0",
+  "description": "Shared Tailwind CSS styles and configuration for Le Petit Garcon projects",
+  "type": "module",
+  "main": "./tailwind.config.js",
+  "files": [
+    "tailwind.config.js",
+    "global.css",
+    "fonts.css",
+    "fonts/",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "keywords": [
+    "tailwind",
+    "css",
+    "styles",
+    "astro"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+
