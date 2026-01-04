@@ -1,0 +1,178 @@
+@import './fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	color-scheme: light;
+	--color-background: 244 243 239;
+	--color-surface: 255 255 255;
+	--color-surface-elevated: 255 255 255;
+	--color-border: 212 212 208;
+	--color-border-strong: 91 91 91;
+	--color-text: 19 19 19;
+	--color-text-muted: 91 91 91;
+	--color-text-soft: 140 140 135;
+	--color-accent: 0 163 92;
+	--color-accent-soft: 209 232 189;
+}
+
+@layer base {
+	html {
+		font-family: 'Suisse Intl', system-ui, sans-serif;
+		font-feature-settings: 'ss01' 1, 'ss02' 1, 'ss03' 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-size: 16px;
+		background-color: rgb(var(--color-background));
+		color: rgb(var(--color-text));
+		overflow-x: hidden;
+	}
+
+	body {
+		margin: 0;
+		background-color: rgb(var(--color-background));
+		color: rgb(var(--color-text));
+		overflow-x: hidden;
+	}
+
+	a {
+		color: rgb(var(--color-accent));
+		text-decoration: none;
+		transition: text-decoration 150ms ease;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	/* Buttons should not underline on hover */
+	a.inline-flex:hover {
+		text-decoration: none;
+	}
+
+	/* Navigation links should not underline on hover */
+	nav a:hover {
+		text-decoration: none;
+	}
+
+	::selection,
+	::-moz-selection {
+		background: rgba(var(--color-accent), 0.85);
+		color: rgb(var(--color-surface));
+	}
+}
+
+@layer components {
+	.h1 {
+		font-size: theme('fontSize.h1.0');
+		line-height: theme('fontSize.h1.1.lineHeight');
+		letter-spacing: theme('fontSize.h1.1.letterSpacing');
+		font-weight: theme('fontWeight.regular');
+	}
+
+	.h2 {
+		font-size: theme('fontSize.h2.0');
+		line-height: theme('fontSize.h2.1.lineHeight');
+		letter-spacing: theme('fontSize.h2.1.letterSpacing');
+		font-weight: theme('fontWeight.regular');
+	}
+
+	.h3 {
+		font-size: theme('fontSize.h3.0');
+		line-height: theme('fontSize.h3.1.lineHeight');
+		letter-spacing: theme('fontSize.h3.1.letterSpacing');
+		font-weight: theme('fontWeight.regular');
+	}
+
+	.h4 {
+		font-size: theme('fontSize.h4.0');
+		line-height: theme('fontSize.h4.1.lineHeight');
+		letter-spacing: theme('fontSize.h4.1.letterSpacing');
+		font-weight: theme('fontWeight.medium');
+	}
+
+	.body,
+	.body-md {
+		font-size: theme('fontSize.body.0');
+		line-height: theme('fontSize.body.1.lineHeight');
+		letter-spacing: theme('fontSize.body.1.letterSpacing');
+		font-weight: theme('fontWeight.regular');
+	}
+
+	.body-lg {
+		font-size: theme('fontSize.body-lg.0');
+		line-height: theme('fontSize.body-lg.1.lineHeight');
+		letter-spacing: theme('fontSize.body-lg.1.letterSpacing');
+		font-weight: theme('fontWeight.regular');
+	}
+
+	.body-xxl {
+		font-size: theme('fontSize.body-xl.0');
+		line-height: theme('fontSize.body-xl.1.lineHeight');
+		letter-spacing: theme('fontSize.body-xl.1.letterSpacing');
+		font-weight: theme('fontWeight.regular');
+	}
+
+	.body-sm {
+		font-size: theme('fontSize.body-sm.0');
+		line-height: theme('fontSize.body-sm.1.lineHeight');
+		letter-spacing: theme('fontSize.body-sm.1.letterSpacing');
+		font-weight: theme('fontWeight.regular');
+	}
+
+	.caption {
+		font-size: theme('fontSize.caption.0');
+		line-height: theme('fontSize.caption.1.lineHeight');
+		letter-spacing: theme('fontSize.caption.1.letterSpacing');
+		font-weight: theme('fontWeight.regular');
+		color: rgb(var(--color-text-soft));
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+	}
+}
+
+@layer utilities {
+
+	.bg-background {
+		background-color: rgb(var(--color-background)) !important;
+	}
+
+	.bg-surface {
+		background-color: rgb(var(--color-surface)) !important;
+	}
+
+	.bg-surface-elevated {
+		background-color: rgb(var(--color-surface-elevated)) !important;
+	}
+
+	.bg-accent-soft {
+		background-color: rgb(var(--color-accent-soft)) !important;
+	}
+
+	.text-primary {
+		color: rgb(var(--color-text)) !important;
+	}
+
+	.text-muted {
+		color: rgb(var(--color-text-muted)) !important;
+	}
+
+	.text-soft {
+		color: rgb(var(--color-text-soft)) !important;
+	}
+
+	.text-accent {
+		color: rgb(var(--color-accent)) !important;
+	}
+
+	.border-default {
+		border-color: rgb(var(--color-border)) !important;
+	}
+
+	.border-strong {
+		border-color: rgb(var(--color-border-strong)) !important;
+	}
+}
+
