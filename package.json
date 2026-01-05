@@ -5,6 +5,7 @@
   "type": "module",
   "main": "./tailwind.config.mjs",
   "exports": {
+    "./components/ui/*.astro": "./components/ui/*.astro",
     "./components/ui/*": "./components/ui/*",
     "./tailwind.config.mjs": "./tailwind.config.mjs",
     "./global.css": "./global.css",
